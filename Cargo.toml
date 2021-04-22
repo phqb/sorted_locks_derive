@@ -1,7 +1,14 @@
 [package]
+authors = ["phqb <phqb98@gmail.com>"]
+description = "Macro to aquire `std::syn::RwLock` or `std::syn::Mutex` locks with consistent order to prevent deadlock"
+homepage = "https://github.com/phqb/sorted_locks_derive"
 name = "sorted_locks_derive"
-version = "0.1.0"
+repository = "https://github.com/phqb/sorted_locks_derive"
+license-file = "LICENSE"
 edition = "2018"
+version = "0.1.0"
+readme = "README.md"
+keywords = ["macro"]
 
 [lib]
 proc-macro = true
