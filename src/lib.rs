@@ -79,8 +79,8 @@ pub fn sorted_locks(tokens: TokenStream) -> TokenStream {
             Mode::ReadClone => {
                 quote! { let #target = self.#target.read().expect("must read").clone(); }
             }
-            Mode::Write => quote! { let #target = self.#target.write().expect("must write"); },
-            Mode::Lock => quote! { let #target = self.#target.lock().expect("must get lock"); },
+            Mode::Write => quote! { let mut #target = self.#target.write().expect("must write"); },
+            Mode::Lock => quote! { let mut #target = self.#target.lock().expect("must get lock"); },
         });
     }
 
